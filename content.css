@@ -1,0 +1,51 @@
+#dbx-custom-sort-button {
+  align-items: center;
+  background: linear-gradient(#4f5f68, #151a1d);
+  border: 1px solid #a8c4d0;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 1px 2px rgba(0, 0, 0, 0.65);
+  box-sizing: border-box;
+  color: #c9f4ff;
+  cursor: pointer;
+  display: flex;
+  font: 700 20px/1 Arial, sans-serif;
+  justify-content: center;
+  padding-bottom: 2px;
+  text-shadow: 0 1px 1px #000;
+  z-index: 3;
+}
+
+#dbx-custom-sort-button:hover,
+#dbx-custom-sort-button:focus-visible {
+  background: linear-gradient(#6d8590, #24343c);
+  outline: 2px solid #42d9ff;
+  outline-offset: 1px;
+}
+
+#dbx-custom-sort-button:active {
+  background: linear-gradient(#151a1d, #4f5f68);
+}
+
+#dbx-no-rooms-message {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  color: #fff;
+  display: none;
+  font: 600 20px/1.4 Arial, sans-serif;
+  height: 120px;
+  justify-content: center;
+  left: 192px;
+  padding: 24px;
+  position: absolute;
+  text-align: center;
+  top: 100px;
+  width: 590px;
+  z-index: 5;
+}
+
+html.dbx-hide-greenlines #greenlines {
+  display: none !important;
+}

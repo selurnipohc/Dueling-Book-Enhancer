@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Dueling Book Enhancer",
+  "version": "1.1.5",
+  "description": "Customizes Dueling Book rooms, hosting defaults, Card Pools, colors, and deck sorting.",
+  "minimum_chrome_version": "95",
+  "permissions": [
+    "storage"
+  ],
+  "action": {
+    "default_title": "Dueling Book Enhancer",
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://duelingbook.com/*",
+        "https://www.duelingbook.com/*"
+      ],
+      "js": [
+        "bundled-banlists.js",
+        "enhancer-core.js",
+        "content.js"
+      ],
+      "css": [
+        "content.css"
+      ],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "https://duelingbook.com/*",
+        "https://www.duelingbook.com/*"
+      ],
+      "js": [
+        "bridge.js"
+      ],
+      "run_at": "document_start",
+      "world": "ISOLATED"
+    }
+  ]
+}
